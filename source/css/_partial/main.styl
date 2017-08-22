@@ -118,17 +118,15 @@
             background: white;
             border: 5px solid #88acdb;
             box-shadow: 0 0 1.5em #88acdb;
-            animation: profilepic .15s linear infinite alternate;
-            -webkit-animation: profilepic .15s linear infinite alternate; 
+            animation: profilepic 5s linear infinite;
+            -webkit-animation: profilepic 5s linear infinite;
         }
         @keyframes profilepic {
             0% {
-                right: 4px;
-                top: 1x;
+                transform: rotate(360deg);
             }
             100% {
-                right: 0px;
-                top: -1px;
+                transform: rotate(0deg);
             }
         }
     }

@@ -14,10 +14,10 @@ menu:
   关于我: /about/
 
 # Link to your avatar | 填写头像地址
-avatar: /img/avatar.png
+avatar: /img/avatar.jpg
 
 # Small icon of Your site | 站点小图标地址
-favicon: /favicon.png
+favicon: /favicon.ico
 
 # Internationalization | 主题语言
 ## Change Language in SITE's _config.yml | 在站点配置中切换语言
@@ -31,7 +31,7 @@ favicon: /favicon.png
 root_url: 
 
 # Year of Site Creation | 网站成立年份
-since: 2016
+since: 2017
 
 # Social info. Bar | 社交信息展示
 ## Keep "mailto:" in Email | 设置 Email 时保留 "mailto:"
@@ -40,9 +40,9 @@ since: 2016
 ## https://github.com/hexojs/hexo-generator-feed
 
 subnav:
-  Email: "mailto:123@123.com"
+  Email: "mailto:wangriyu1997@gmail.com"
   #新浪微博: "sina weibo"
-  GitHub: "#"
+  GitHub: "https://github.com/wangriyu"
   #V2EX: "#"
   RSS: "/atom.xml"
   #知乎: "zhihu"
@@ -52,7 +52,7 @@ subnav:
   #博客园: "cnblogs"
   #CSDN: ""
   #Coding: ""
-  #网易云音乐: "netease"
+  网易云音乐: "https://music.163.com/#/user/home?id=102244407"
   #虾米音乐: "xiami"
   #bilibili: ""
   #AcFun: ""
@@ -127,17 +127,17 @@ base_font_size: 16  #px, 16 - 24
 color_scheme: 
 
 highlight_style:
-  #on: true
-  inline_code: 1  # Value: 0 - 9 可选
-  code_block: 1  # Value: 0 - 4 
+  on: true
+  inline_code: 3  # Value: 0 - 9 可选
+  code_block: 4  # Value: 0 - 4
   # Set inline_code to style highlight text
   # Chose a highlight theme for code block
   # 通过 inline_code 切换内置文本高亮样式
   # 通过 code_block 切换内置代码高亮配色主题
 
 blockquote_style:
-  #on: true
-  blockquote: 1  # Value: 0 - 7 可选
+  on: true
+  blockquote: 3  # Value: 0 - 7 可选
   # 自定义文章「引用部分」的样式
 
 # Headings Style | 标题风格
@@ -145,7 +145,7 @@ blockquote_style:
 heading_style: 0 # Value: 0 - 2
 
 ## List style type (ul) | 无序列表项标记样式
-list_style: 0  # value: 0 - 12 可选
+list_style: 2  # value: 0 - 12 可选
 
 # 左边栏宽度 px
 left_col_width: 300
@@ -158,7 +158,7 @@ toc:
   on: true
   list_number: true # 目录序号
   max_depth: 3  # 1 - 6 (h1-h6) 目录最大级数
-  nowrap: false # Keep title on same line | 目录标题不换行
+  nowrap: true # Keep title on same line | 目录标题不换行
 
 # 是否开启主页及加载头像时的动画效果
 # Animation in Homepage and Loading avatar
@@ -166,7 +166,7 @@ animate: true
 
 # Load jQuery UI to style tooltips
 # 工具提示框样式美化
-jquery_ui: false
+jquery_ui: true
 
 # Max width of right cloumn | 限制右侧内容的宽带 
 limit_article_width: 
@@ -181,13 +181,16 @@ tagcloud: true
 
 # Blogroll, Link exchange | 友情链接
 friends:
-  Hexo: https://hexo.io
-  GitHub: https://pages.github.com/
-  MOxFIVE: http://moxfive.xyz/
+  YangChengLong: https://github.com/yangchenglong11
+  LiuJiaChang: https://github.com/Jsharkc
+  YusanKurban: https://github.com/yusank
+  LinHao: https://github.com/DoubleWoodH
+  ShiChao: https://github.com/lovae123
+  TechCatsLab: https://github.com/orgs/TechCatsLab/dashboard
 #friends: false
 
 #是否开启“关于我”。
-aboutme: 专注于前端
+aboutme: 不悲不喜，不卑不亢，努力成为一个更好的程序猿！
 #aboutme: false
 
 # Open link in a new tab | 是否在新窗口打开链接
@@ -196,12 +199,12 @@ aboutme: 专注于前端
 open_in_new:
   global: 0 # 0-2
   title: false # article title in homepage 主页文章标题
-  post: false # link within post/page 正文中的链接
+  post: true # link within post/page 正文中的链接
+  article_nav: false # 导航
+  mini_archives: fasle # 迷你归档
   tags: false # 标签
   categories: false # 分类
-  article_nav: false # 导航
-  archives: true # 归档
-  mini_archives: true # 迷你归档
+  archives: false # 归档
   menu: false # 边栏菜单
   friends: true  # 友情链接
   socail: true # 社交图标
@@ -219,9 +222,9 @@ ie_updater:
 
 # Tab Title Change | 标签页标题切换
 tab_title_change: 
-  on: false
-  left_tab_title: '(つェ⊂) 我藏好了哦~ '
-  return_tab_title: '(*´∇｀*) 被你发现啦~ '
+  on: true
+  left_tab_title: '(つェ⊂)'
+  return_tab_title: '(*´∇｀*)~ '
 
 
 # >>> Vendors | 第三方工具 & 服务 <<<
@@ -230,7 +233,7 @@ tab_title_change:
 ## Insatall below plugin to take effect | 使用搜索需先安装对应插件
 ## https://github.com/PaicHyperionDev/hexo-generator-search
 search: 
-  #on: true
+  on: true
   onload: false
   ## true: get search.xml file when the page has loaded
   ## false: get the file when search box gets focus
@@ -246,8 +249,8 @@ mathjax: false
 # Socail Share | 是否开启分享
 share: 
   on: true
-  baidu: true
-  addthis: false
+  baidu: false
+  addthis: true
   addthis_pubid: "ra-56ff76c972fc0cf9"
   ## Go to www.addthis.com/dashboard to get your pubid (in src of Code)
   ## and customize AddThis share buttons
@@ -299,3 +302,5 @@ CDN:
   clipboard: //cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js
   mathjax: //cdn.bootcss.com/mathjax/2.6.1/MathJax.js
   scrollreveal: //cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js
+  aplayer: //cdn.bootcss.com/aplayer/1.6.0/APlayer.min.js
+  player: //api.i-meto.com/music/player.js
