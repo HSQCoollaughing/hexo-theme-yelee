@@ -145,7 +145,7 @@
   border: none;
   margin: -30px 0 20px 30px;
 }
-.article-entry{
+.article-entry {
   @require "customise/blockquote"
   line-height: 1.65em;
   padding:0 2em;
@@ -154,14 +154,14 @@
     text-decoration: underline;
     color: #9c9;
   }
-  p{
+  p {
     margin: .85em auto;
     line-height: 1.7;
   }
   em {
     font-style: italic;
   }
-  video{
+  video {
     max-width: 100%;
   }
   strong {
@@ -170,12 +170,12 @@
   li strong {
     color: #708090;
   }
-  .caption{
+  .caption {
     display: block;
     font-size: 0.8em;
     color: #aaa;
   }
-  hr{
+  hr {
     height: 0;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -187,14 +187,14 @@
   .table-area {
     overflow: auto;
   }
-  table{
+  table {
     width:100%;
     max-width: 65em;
     border: 1px solid #dedede;
     margin: 15px auto;
     border-collapse:collapse;
     empty-cells:show;
-    tr,td{
+    tr,td {
       height:35px;
     }
     th {
@@ -203,34 +203,63 @@
       background: rgba(158, 188, 226, .2);
       white-space: nowrap;
     }
-    tbody{
-      tr:hover{
+    tbody {
+      tr:hover {
         background: #efefef;
       }
     }
-    td,th{
+    td,th {
       border: 1px solid #dedede;
       padding: 0 10px;
     }
     tr:nth-child(2n) {
       background: rgba(158, 188, 226, .12);
     }
-    td:nth-child(1){
+    td:nth-child(1) {
       white-space: nowrap;
     }
   }
   @import "customise/list"
   @import "customise/heading"
-  figure{
+  figure {
     table {
       border: none;
       width: auto;
       margin: 0;
-      tbody{
-        tr:hover{
+      tbody {
+        tr:hover {
           background: none;
         }
       }
+    }
+  }
+  #notFound {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    width: 80%;
+    height: auto;
+  }
+  #yun {
+    height: 320px;
+    width: 100%;
+    position: relative;
+  }
+  @media only screen and (max-width: 768px) {
+    #yun {
+      height: 300px;
+    }
+    #notFound {
+      width: 100%;
+    }
+  }
+  @media only screen and (max-width: 425px) {
+    #yun {
+      height: 200px;
+    }
+    #notFound {
+      width: 120%;
     }
   }
 }

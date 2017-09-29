@@ -286,15 +286,18 @@
     content "\f02b"
     margin-left 1em
 
-.article-tag span
-    cursor: pointer
-    line-height: 31px
-    font-size: 13px
-    color: #aaa
-
-.article-tag span::before
-    content: "\27A4"
-    margin-left: 1em
+.article-tag
+    .article-tag-list
+        display flex
+        flex-wrap wrap
+    span
+        cursor pointer
+        line-height 29px
+        font-size 13px
+        color #aaa
+        &:before
+            content "\27A4"
+            margin-left 1em
 
 .article-category::before
     content "\f02d"
