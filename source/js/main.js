@@ -1,15 +1,15 @@
 require([], function (){
-
+    var jsPath = yiliaConfig.rootUrl + "js\/";
     var isMobileInit = false;
     var loadMobile = function(){
-        require([yiliaConfig.rootUrl + 'js/mobile.js'], function(mobile){
+        require([jsPath + 'mobile.js'], function(mobile){
             mobile.init();
             isMobileInit = true;
         })
     }
     var isPCInit = false;
     var loadPC = function(){
-        require([yiliaConfig.rootUrl + 'js/pc.js'], function(pc){
+        require([jsPath + 'pc.js'], function(pc){
             pc.init();
             isPCInit = true;
         })
@@ -26,7 +26,7 @@ require([], function (){
             mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
             ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
             android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
-            iPhone: u.indexOf('iPhone') > -1, // || u.indexOf('Mac') > -1, //是否为iPhone或者安卓QQ浏览器
+            iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者安卓QQ浏览器
             iPad: u.indexOf('iPad') > -1, //是否为iPad
             webApp: u.indexOf('Safari') == -1 ,//是否为web应用程序，没有头部与底部
             weixin: u.indexOf('MicroMessenger') == -1 //是否为微信浏览器
@@ -40,14 +40,14 @@ require([], function (){
             return;
         }
         var w = $(window).width();
-        if (w >= 700) {
+        if (w > 768) {
             loadPC();
         } else {
             loadMobile();
         }
     });
 
-    if(!!browser.versions.mobile || $(window).width() < 800){
+    if(!!browser.versions.mobile || $(window).width() <= 768){
         loadMobile();
     } else {
         loadPC();
@@ -88,7 +88,7 @@ require([], function (){
         if(!!yiliaConfig.isHome) {
             require([yiliaConfig.scrollreveal], function (ScrollReveal) {
                 var animationNames = [
-                "pulse", "fadeIn","fadeInRight", "flipInX", "lightSpeedIn","rotateInUpLeft", "slideInUp","zoomIn",
+                    "pulse","fadeInRight", "flipInX", "lightSpeedIn","rotateInUpLeft", "slideInUp","zoomIn",
                 ],
                 len = animationNames.length,
                 randomAnimationName = animationNames[Math.ceil(Math.random() * len) - 1];
@@ -125,11 +125,13 @@ require([], function (){
                 }
                 ScrollReveal({
                     duration: 0,
+                    delay: 0,
+                    mobile: true,
                     afterReveal: function (domEl) {
-                        $(domEl).addClass('animated ' + randomAnimationName).css({opacity: 1})
+                        $(domEl).addClass('animated ' + randomAnimationName).css({opacity: 1});
                     }
                 }).reveal(animateScope);
-            })
+            });
         } else {
             $('.body-wrap > article').css({opacity: 1});
         }

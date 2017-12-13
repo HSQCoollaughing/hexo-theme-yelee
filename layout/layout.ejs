@@ -2,14 +2,39 @@
 <body>
   <div id="container">
     <div class="left-col">
-    <%- partial('_partial/left-col', null, {cache: !config.relative_link}) %>
+      <%- partial('_partial/left-col', null, {cache: !config.relative_link}) %>
     </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bubbly-bg@0.2.3/dist/bubbly-bg.js"></script>
+    <script>
+      var userAgent = window.navigator.userAgent;
+      bubbly({
+        animate: true,
+        blur: 1,
+        bubbleFunc: () => `hsla(${Math.random() * 360}, 100%, 50%, ${Math.random() * 0.25})`,
+        bubbles: !!userAgent.match(/AppleWebKit.*Mobile.*/) ? 20 : 50,
+        canvas: document.querySelector("#background"),
+        colorStart: "#FFC956",
+        colorStop: "#FF2C9A",
+        compose: "lighter",
+        shadowColor: "#383838",
+      });
+    </script>
     <div class="mid-col">
       <%- partial('_partial/mobile-nav', null, {cache: !config.relative_link}) %>
       <div class="body-wrap"><%- body %></div>
       <%- partial('_partial/footer') %>
     </div>
     <%- partial('_partial/after-footer') %>
+    <%- live2d({ model: "koharu" }) %>
   </div>
+  <script>
+    if ($(".left-col").css("display") === "none") {
+      document.getElementById("live2dcanvas").style.height = "25vh";
+    }
+  </script>
+
+  <% if (theme.share.on && theme.share.addthis){ %>
+    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=<%-theme.share.addthis_pubid%>"></script>
+  <% } %>
 </body>
 </html>
