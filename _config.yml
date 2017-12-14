@@ -7,9 +7,8 @@ Yelee: "3.5"
 ## About Page: `hexo new page about`
 ## Tags Cloud Page: `hexo new page tags`
 menu:
-  主页: /
-  所有文章: /archives/
-  #随笔: /tags/随笔
+  主页: https://home.wangriyu.wang
+  归档: /archives/
   标签云: /tags/
   关于我: /about/
 
@@ -81,7 +80,7 @@ subnav:
 # Chose ONE as your comment system and keep others disable.
 # 选一个作为网站评论系统，其他保持禁用。
 
-preload_comment: true
+preload_comment: false
 ## false: 当点击评论条等区域时再加载评论模块
 ## false: load comment's section until u click/hover on the bar/icon
 
@@ -90,8 +89,8 @@ show_count: false
 ## Add comment count after article title
 
 disqus: 
-  #on: true
-  shortname: 
+  on: false
+  shortname:
   # https://help.disqus.com/customer/en/portal/articles/466208-what-s-a-shortname-
   # It is unnecessary to enable disqus here if 
   # you have set "disqus_shortname" in your site's "_config.yml" 
@@ -117,7 +116,7 @@ youyan:
 ## "5": show images form bg-1.jpg to bg-5.jpg in `/yelee/source/background/`
 ## "5": 显示`/yelee/source/background/`文件夹中 bg-1.jpg 到 bg-5.jpg 这5张图片
 ## "0": white-gray background | 淳朴灰白背景
-background_image: 6
+background_image: 4
 
 # Base Font Size | 字号调节
 base_font_size: 16  #px, 16 - 24
@@ -160,13 +159,9 @@ toc:
   max_depth: 3  # 1 - 6 (h1-h6) 目录最大级数
   nowrap: true # Keep title on same line | 目录标题不换行
 
-# 是否开启主页及加载头像时的动画效果
-# Animation in Homepage and Loading avatar
-animate: true
-
 # Load jQuery UI to style tooltips
 # 工具提示框样式美化
-jquery_ui: true
+jquery_ui: false
 
 # Max width of right cloumn | 限制右侧内容的宽带 
 limit_article_width: 
@@ -186,10 +181,10 @@ friends:
   YusanKurban: https://github.com/yusank
   SunAnXiang: https://github.com/sunanxiang
   LinHao: https://github.com/DoubleWoodH
-  ShiChao: https://github.com/lovae123
+  ShiChao: https://github.com/ShiChao1996
   TangXiaoJi: https://github.com/Txiaozhe
   JiaChenHui: https://github.com/LLLeon
-  TechCatsLab: https://github.com/orgs/TechCatsLab/dashboard
+  TechCatsLab: https://github.com/TechCatsLab
 #friends: false
 
 #是否开启“关于我”。
@@ -249,22 +244,22 @@ fancybox: true
 ## https://www.mathjax.org/
 mathjax: false
 
-# Socail Share | 是否开启分享
+# Social Share | 是否开启分享
 share: 
   on: true
   baidu: false
   addthis: true
-  addthis_pubid: "ra-56ff76c972fc0cf9"
+  addthis_pubid: "ra-5992865c5fd0cfd1"
   ## Go to www.addthis.com/dashboard to get your pubid (in src of Code)
   ## and customize AddThis share buttons
 
 # 百度、谷歌站长验证。填写 HTML 标签 content
 # Site Verification for Google and Baidu. HTML label content.
-baidu_site: 
-google_site: 
+baidu_site:
+google_site:
 
 # Fill in Google Analytics tracking ID, #e.g. UA-XXXXX-X
-google_analytics: 
+google_analytics:
 
 # 百度统计 http://sitecenter.baidu.com/sc-web/
 # 查看代码，填入 //hm.baidu.com/hm.js? 之后的内容
@@ -288,9 +283,9 @@ github_widget: false
 #       loading-bar|mac-osx|minimal
 # color: black|blue|green|orange|pink|purple|red|silver|white|yellow|
 progressBar:
-  on: true
-  type: "corner-indicator"  # Keep Quotes | 保留引号避免出错
-  color: silver
+  on: false
+  type: "minimal"  # Keep Quotes | 保留引号避免出错
+  color: orange
 
 # 打赏
 # 将on改为false去掉打赏
@@ -305,12 +300,12 @@ CDN:
   fontawesome: //cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css
   fancybox_js: //cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js
   fancybox_css: //cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css
-  animate_css: //cdn.bootcss.com/animate.css/3.5.1/animate.min.css
   jquery_ui_js: //cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js
   jquery_ui_css: //cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css
   pace_js: //cdn.bootcss.com/pace/1.0.2/pace.min.js
   clipboard: //cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js
   mathjax: //cdn.bootcss.com/mathjax/2.6.1/MathJax.js
-  scrollreveal: //cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js
   aplayer: //cdn.bootcss.com/aplayer/1.6.0/APlayer.min.js
   player: //api.i-meto.com/music/player.js
+  aos_css: //cdn.bootcss.com/aos/2.2.0/aos.css
+  aos_js: //cdn.bootcss.com/aos/2.2.0/aos.js

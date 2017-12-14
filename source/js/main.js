@@ -84,57 +84,19 @@ require([], function (){
     }
 
     // Animate on Homepage
-    if(!!yiliaConfig.animate) {
-        if(!!yiliaConfig.isHome) {
-            require([yiliaConfig.scrollreveal], function (ScrollReveal) {
-                var animationNames = [
-                    "pulse","fadeInRight", "flipInX", "lightSpeedIn","rotateInUpLeft", "slideInUp","zoomIn",
-                ],
-                len = animationNames.length,
-                randomAnimationName = animationNames[Math.ceil(Math.random() * len) - 1];
-
-                // Fallback (CSS3 keyframe, requestAnimationFrame)
-                if (!window.requestAnimationFrame) {
-                    $('.body-wrap > article').css({opacity: 1});
-                    if (navigator.userAgent.match(/Safari/i)) {
-                        function showArticle(){
-                            $(".article").each(function(){
-                                if( $(this).offset().top <= $(window).scrollTop()+$(window).height() && !($(this).hasClass('show')) ) {
-                                    $(this).removeClass("hidden").addClass("show");
-                                    $(this).addClass("is-hiddened");
-                                } else {
-                                    if(!$(this).hasClass("is-hiddened")) {
-                                        $(this).addClass("hidden");
-                                    }
-                                }
-                            })
-                        }
-                        $(window).on('scroll', function(){
-                            showArticle();
-                        });
-                        showArticle();
-                    }
-                    return;
-                }
-
-                var animateScope = ".body-wrap > article";
-                var $firstArticle = $(".body-wrap > article:first-child");
-                if ($firstArticle.height() > $(window).height()) {
-                    var animateScope = ".body-wrap > article:not(:first-child)";
-                    $firstArticle.css({opacity: 1});
-                }
-                ScrollReveal({
-                    duration: 0,
-                    delay: 0,
-                    mobile: true,
-                    afterReveal: function (domEl) {
-                        $(domEl).addClass('animated ' + randomAnimationName).css({opacity: 1});
-                    }
-                }).reveal(animateScope);
-            });
-        } else {
-            $('.body-wrap > article').css({opacity: 1});
-        }
+    if(!!yiliaConfig.isHome) {
+        var animationNames = ["fade-left", "flip-down", "zoom-in-up", "fade-up-left", "zoom-in-left", "zoom-out"],
+        len = animationNames.length,
+        randomAnimationName = animationNames[Math.floor(Math.random() * len)];
+        $('.body-wrap > article').each(function(){
+            if ($(this).offset().top < $(window).scrollTop() + $(window).height()) {
+                $(this).css({opacity: 1})
+            } else {
+                $(this).attr("data-aos", randomAnimationName).attr("data-aos-duration", 800).attr("data-aos-delay", 150);
+            }
+        })
+    } else {
+        $('.body-wrap > article').css({opacity: 1});
     }
 
     // TOC
