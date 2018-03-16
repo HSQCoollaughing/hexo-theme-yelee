@@ -7,10 +7,12 @@ Yelee: "3.5"
 ## About Page: `hexo new page about`
 ## Tags Cloud Page: `hexo new page tags`
 menu:
-  主页: https://home.wangriyu.wang
+  # 主页: /
+  首页: https://home.wangriyu.wang
   归档: /archives/
+  相册: /pages/waterFallAlbum
+  简历: /about/
   标签云: /tags/
-  关于我: /about/
 
 # Link to your avatar | 填写头像地址
 avatar: /img/avatar.jpg
@@ -44,7 +46,7 @@ subnav:
   GitHub: "https://github.com/wangriyu"
   #V2EX: "#"
   RSS: "/atom.xml"
-  #知乎: "zhihu"
+  知乎: "https://www.zhihu.com/people/ke-lao-en-clown/activities"
   #豆瓣: "douban"
   #简书: "jianshu"
   #SegmentFault: ""
@@ -52,16 +54,17 @@ subnav:
   #CSDN: ""
   #Coding: ""
   网易云音乐: "https://music.163.com/#/user/home?id=102244407"
+  掘金: "https://juejin.im/user/58c3744bda2f605609683d66"
   #虾米音乐: "xiami"
   #bilibili: ""
   #AcFun: ""
   #niconico: ""
   #Quora: ""
-  #Facebook: "#"
-  #Google: "#"
-  #Twitter: "#"
+  Facebook: "https://www.facebook.com/riyu.wang.7"
+  #Google: "https://plus.google.com/u/0/102673632981858861861"
+  Twitter: "https://twitter.com/kClownduo"
   #LinkedIn: "#"
-  #QQ: "#"
+  #QQ: "#929664292"
   #微信: "Wechat"
   #PayPal: "#"
   #StackOverflow: "#"
@@ -89,8 +92,8 @@ show_count: false
 ## Add comment count after article title
 
 disqus: 
-  on: false
-  shortname:
+  #on: true
+  shortname: wangriyu
   # https://help.disqus.com/customer/en/portal/articles/466208-what-s-a-shortname-
   # It is unnecessary to enable disqus here if 
   # you have set "disqus_shortname" in your site's "_config.yml" 
@@ -108,6 +111,14 @@ youyan:
   # 是否开启友言评论，http://www.uyan.cc/index.php
   # id 中填写你的友言用户数字ID，注册后进入后台管理即可查看
   # 友言服务在 Web 环境下运行，普通本地环境无法查看，请部署后在线上测试。
+
+valine:
+  appid: iOiLPXAowPOMaotX1WyfeCWc-gzGzoHsz
+  appkey: lpS7UTUdJ4DkttQMlw4ulEFP
+  verify: false #验证码
+  notify: false #评论回复提醒
+  avatar: identicon #评论列表头像样式：''/mm/identicon/monsterid/wavatar/retro/hide
+  placeholder: Just do it ! #评论框占位符
 
 
 # >>> Style Customisation 样式自定义 <<<
@@ -176,6 +187,7 @@ tagcloud: true
 
 # Blogroll, Link exchange | 友情链接
 friends:
+  TechCatsLab: https://github.com/TechCatsLab
   YangChengLong: https://github.com/yangchenglong11
   LiuJiaChang: https://github.com/Jsharkc
   YusanKurban: https://github.com/yusank
@@ -184,7 +196,7 @@ friends:
   ShiChao: https://github.com/ShiChao1996
   TangXiaoJi: https://github.com/Txiaozhe
   JiaChenHui: https://github.com/LLLeon
-  TechCatsLab: https://github.com/TechCatsLab
+
 #friends: false
 
 #是否开启“关于我”。
@@ -214,7 +226,7 @@ rss: /atom.xml
 # 针对 IE6/7/8 的升级浏览器提示
 ie_updater:
   on: true
-  link: //outdatedbrowser.com/
+  link: http://outdatedbrowser.com/
   ## http://browsehappy.com/
   ## http://outdatedbrowser.com/
 
@@ -259,7 +271,7 @@ baidu_site:
 google_site:
 
 # Fill in Google Analytics tracking ID, #e.g. UA-XXXXX-X
-google_analytics:
+google_analytics: UA-106179639-1
 
 # 百度统计 http://sitecenter.baidu.com/sc-web/
 # 查看代码，填入 //hm.baidu.com/hm.js? 之后的内容
@@ -291,8 +303,7 @@ progressBar:
 # 将on改为false去掉打赏
 donate:
   on: true
-  wechatpay: /img/wechatpay.jpg
-  alipay: /img/alipay.jpg
+  multipay: /img/multipay.png
 
 CDN:
   jquery: //cdn.bootcss.com/jquery/2.2.4/jquery.min.js
@@ -306,6 +317,6 @@ CDN:
   clipboard: //cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js
   mathjax: //cdn.bootcss.com/mathjax/2.6.1/MathJax.js
   aplayer: //cdn.bootcss.com/aplayer/1.6.0/APlayer.min.js
-  player: //api.i-meto.com/music/player.js
+  player: //cdn.jsdelivr.net/npm/meting@1.0.1/dist/Meting.min.js
   aos_css: //cdn.bootcss.com/aos/2.2.0/aos.css
   aos_js: //cdn.bootcss.com/aos/2.2.0/aos.js

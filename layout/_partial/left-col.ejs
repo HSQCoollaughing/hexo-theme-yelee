@@ -125,20 +125,20 @@
                 <%}%>
 
                 <%if(theme.aboutme){%>
-                <%if(!theme.friends){%>
-                <section class="switch-part switch-part3">
-                <%}else{%>
-                <section class="switch-part switch-part4">
-                <%}%>
-                    <div id="js-aboutme"><%=theme.aboutme%></div>
-                </section>
+                    <%if(!theme.friends){%>
+                        <section class="switch-part switch-part3">
+                    <%}else{%>
+                        <section class="switch-part switch-part4">
+                    <%}%>
+                        <div id="js-aboutme"><%=theme.aboutme%></div>
+                    </section>
                 <%}%>
             </div>
         </div>
     </header>
-  <% if (theme.donate.alipay) { %>
+  <% if (theme.donate.multipay) { %>
     <div id="donate">
-        <img id="alipay" src="<%=theme.donate.alipay%>" width="250px" alt="<%=theme.author%> Alipay"/>
+        <img id="multipay" src="<%=theme.donate.multipay%>" width="250px" alt="<%=theme.author%> Multipay"/>
         <div class="triangle"></div>
     </div>
   <% } %>

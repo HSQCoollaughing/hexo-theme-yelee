@@ -140,7 +140,7 @@ define([], function(){
     };
 
     return{
-        init: function(){
+        init: function() {
             //构造函数需要的参数
             ctn = document.getElementsByClassName("slider-trigger")[0];
             //构造四步
