@@ -3,8 +3,6 @@ all_heading = "h1, h2, h3, h4, h5, h6"
 
 if !heading_style
     h1
-        margin-top 30px
-    h2
         margin .5em auto
         color rgb(102, 190, 102)
         padding-bottom 5px
@@ -15,6 +13,13 @@ if !heading_style
             color #88acdb
         &::before, &::after
             content " —— "
+            font-family Arial
+    h2
+        margin .5em auto
+        padding-bottom 5px
+        color rgb(102, 190, 102)
+        &::before
+            content "> "
             font-family Arial
     h3
         margin .5em auto
@@ -27,11 +32,19 @@ if !heading_style
             text-decoration underline
         &::after
             content " >"
-    h4, h5, h6
-        margin-top 20px
-        color #574c4c
-        padding-bottom 5px
-        border-bottom 1px solid #ddd
+    h4
+        font-style bold !important
+        color #009688 !important
+        margin 0.5em 5px !important
+    h4
+        font-size 18px !important
+        border-bottom 1px solid #aaa !important
+    h5
+        font-size 16px
+        color #009688 !important
+    h6
+        font-size 14px
+        color #009688 !important
 
 if heading_style == 1
     {all_heading}

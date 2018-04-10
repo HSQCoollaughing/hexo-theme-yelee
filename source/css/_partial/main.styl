@@ -48,12 +48,17 @@
         background-image: url("/img/yule.jpg");
         background-size: cover;
         background-position: 0% 50%;
-        .overlay{
+        .backImg {
             width: 100%;
             height: 180px;
-            background-color: pink;
+            background-color: orange;
             position: absolute;
             opacity: 0.5;
+            img {
+                z-index: -1;
+                cursor: none;
+                pointer-events: none;
+            }
         }
         .intrude-less {
             width: 76%;
@@ -83,6 +88,30 @@
             font-weight: bold;
         }
     }
+    .hide-left-col {
+        z-index: 999;
+        cursor: pointer;
+        transition:all .2s ease-in;
+        position: fixed;
+        top: 0;
+        left: left-col-width;
+        text-align: center;
+        line-height: 30px;
+        display: block;
+        width: 30px;
+        height: 30px;
+        font-size: 28px;
+        background: none;
+        .fa {
+            color: rgb(255, 255, 255, .5);
+        }
+        &:hover {
+            background: rgba(147, 181, 224, .3) !important;
+            .fa {
+                color: white;
+            }
+        }
+    }
     .mid-col {
         position:absolute;
         right:0;
@@ -90,11 +119,15 @@
         background: rgba(200,200,200,.8);
         left: left-col-width;
         width: auto;
+        transition: left .2s ease-in;
     }
 
     @media screen and (max-width:1040px) {
         
-    }@media screen and (max-width:800px) {
+    }@media screen and (max-width:768px) {
+        .hide-left-col {
+            display: none;
+        }
         @import "_partial/mobile"
     }
 }
@@ -309,6 +342,7 @@
 #post-nav-button {
     left: left-col-width;
     top: 61.8%;
+    transition: left .2s ease-in;
     a {
         border-bottom-color: transparent;
         background: none;

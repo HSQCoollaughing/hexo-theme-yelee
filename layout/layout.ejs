@@ -13,26 +13,51 @@
         bubbleFunc: () => `hsla(${Math.random() * 360}, 100%, 50%, ${Math.random() * 0.25})`,
         bubbles: !!userAgent.match(/AppleWebKit.*Mobile.*/) ? 20 : 50,
         canvas: document.querySelector("#background"),
-        colorStart: "#FFC956",
-        colorStop: "#FF2C9A",
+        colorStart: "#f6d365",
+        colorStop: "#fda085",
         compose: "lighter",
         shadowColor: "#383838",
       });
     </script>
+    <div class="hide-left-col" title="隐藏侧栏">
+        <i class="fa fa-angle-double-left"></i>
+    </div>
     <div class="mid-col">
       <%- partial('_partial/mobile-nav', null, {cache: !config.relative_link}) %>
       <div class="body-wrap"><%- body %></div>
       <%- partial('_partial/footer') %>
     </div>
+    <script type="application/javascript">
+      var hide = false;
+      function hideLeftCol() {
+        if (hide) {
+          $(".left-col").width(300);
+          $(".left-col .intrude-less").css('display', '');
+          $("#tocButton").css('display', '');
+          ($("#switch-btn").css("display") === "block" && $("#switch-area").css("display") === "block") || $("#toc").slideDown(320);;
+          $(".hide-left-col").css("left", 300).html('<i class="fa fa-angle-double-left"></i>');
+          $(".mid-col").css("left", 300)
+          $("#post-nav-button").css("left", 300)
+          $("#post-nav-button > a:nth-child(2)").css("display", "block")
+          hide = false
+        } else {
+          $(".left-col").width(0);
+          $(".left-col .intrude-less").css('display', 'none');
+          $("#toc").css('display', 'none');
+          $("#tocButton").css('display', 'none');
+          $(".hide-left-col").css("left", 0).html('<i class="fa fa-angle-double-right"></i>');
+          $(".mid-col").css("left", 0)
+          $("#post-nav-button").css("left", 0)
+          $("#post-nav-button > a:nth-child(2)").css("display", "none")
+          hide = true
+        }
+      }
+      $(".hide-left-col").click(function() {
+        hideLeftCol()
+      });
+    </script>
     <%- partial('_partial/after-footer') %>
-    <%- live2d({ model: "koharu" }) %>
   </div>
-  <script>
-    if ($(".left-col").css("display") === "none") {
-      document.getElementById("live2dcanvas").style.height = "25vh";
-    }
-  </script>
-
   <% if (theme.share.on && theme.share.addthis){ %>
     <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=<%-theme.share.addthis_pubid%>"></script>
   <% } %>

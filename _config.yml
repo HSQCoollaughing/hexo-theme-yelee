@@ -8,7 +8,7 @@ Yelee: "3.5"
 ## Tags Cloud Page: `hexo new page tags`
 menu:
   # 主页: /
-  首页: https://home.wangriyu.wang
+  首页: http://home.wangriyu.wang
   归档: /archives/
   相册: /pages/waterFallAlbum
   简历: /about/
@@ -92,27 +92,28 @@ show_count: false
 ## Add comment count after article title
 
 disqus: 
-  #on: true
+  on: false
   shortname: wangriyu
   # https://help.disqus.com/customer/en/portal/articles/466208-what-s-a-shortname-
   # It is unnecessary to enable disqus here if 
   # you have set "disqus_shortname" in your site's "_config.yml" 
 
 duoshuo: 
-  #on: true
+  on: false
   domain: 
   # 是否开启多说评论，http://duoshuo.com/create-site/
   # 使用上面网址登陆你的多说，然后创建站点，在 domain 中填入你设定的域名前半部分
   # http://<要填的部分>.duoshuo.com (domain只填上<>里的内容，不要填整个网址)
 
 youyan:
-  #on: true
+  on: false
   id: 
   # 是否开启友言评论，http://www.uyan.cc/index.php
   # id 中填写你的友言用户数字ID，注册后进入后台管理即可查看
   # 友言服务在 Web 环境下运行，普通本地环境无法查看，请部署后在线上测试。
 
 valine:
+  on: true
   appid: iOiLPXAowPOMaotX1WyfeCWc-gzGzoHsz
   appkey: lpS7UTUdJ4DkttQMlw4ulEFP
   verify: false #验证码
@@ -120,6 +121,8 @@ valine:
   avatar: identicon #评论列表头像样式：''/mm/identicon/monsterid/wavatar/retro/hide
   placeholder: Just do it ! #评论框占位符
 
+wildfire:
+  on: false
 
 # >>> Style Customisation 样式自定义 <<<
 
@@ -166,8 +169,8 @@ copyright: true
 # Table of contents | 文章目录
 toc:
   on: true
-  list_number: true # 目录序号
-  max_depth: 3  # 1 - 6 (h1-h6) 目录最大级数
+  list_number: false # 目录序号
+  max_depth: 6  # 1 - 6 (h1-h6) 目录最大级数
   nowrap: true # Keep title on same line | 目录标题不换行
 
 # Load jQuery UI to style tooltips
@@ -244,7 +247,7 @@ tab_title_change:
 ## https://github.com/PaicHyperionDev/hexo-generator-search
 search: 
   on: true
-  onload: false
+  onload: true
   ## true: get search.xml file when the page has loaded
   ## false: get the file when search box gets focus
 
