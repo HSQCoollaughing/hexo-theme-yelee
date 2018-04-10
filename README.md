@@ -2,4 +2,4 @@
 
 教程：http://moxfive.coding.me/yelee/
 
-本仓库修改：https://blog.wangriyu.wang/2017/08-Hexo.html
+本仓库修改：http://blog.wangriyu.wang/2017/08-Hexo.html

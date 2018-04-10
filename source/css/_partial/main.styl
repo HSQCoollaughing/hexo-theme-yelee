@@ -67,7 +67,7 @@
             #donate {
                 display: none;
                 position: fixed;
-                top: 280px;
+                top: 290px;
                 left: 25px;
                 z-index: 9;
                 img {
@@ -319,20 +319,22 @@
 
 .hide-labels {
     position: fixed;
-    left: left-col-width + 78px;
-    top: 30px;
-    padding: 1px;
-    border: none;
-    border-radius: 5px;
+    left: left-col-width + 32px;
+    top: 5px;
     cursor: pointer;
     outline: none;
     font-family: inherit;
-    font-size: .9em;
+    font-size: .75em;
     font-weight: bold;
-    color: #666;
     background: none;
-    opacity: .32;
     -webkit-appearance: none;
+    z-index: 100;
+    padding: .2em .4em;
+    border-radius: 5px;
+    border-style : solid;
+    opacity: .8;
+    background: rgba(255, 255, 255, .8);
+    color: gray;
     &:hover {
         color: #88acdb;
         opacity: 1; 
