@@ -85,9 +85,8 @@ require([], function (){
 
     // Animate on Homepage
     if(!!yiliaConfig.isHome) {
-        var animationNames = ["fade-left", "flip-down", "zoom-in-up", "fade-up-left", "zoom-in-left", "zoom-out"],
-        len = animationNames.length,
-        randomAnimationName = animationNames[Math.floor(Math.random() * len)];
+        var animationNames = ["fade-left", "zoom-in-up", "fade-up-left", "zoom-in-left", "zoom-out"],
+        randomAnimationName = animationNames[Math.floor(Math.random() * animationNames.length)];
         $('.body-wrap > article').each(function(){
             if ($(this).offset().top < $(window).scrollTop() + $(window).height()) {
                 $(this).css({opacity: 1})

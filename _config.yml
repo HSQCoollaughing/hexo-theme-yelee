@@ -247,7 +247,7 @@ tab_title_change:
 ## https://github.com/PaicHyperionDev/hexo-generator-search
 search: 
   on: true
-  onload: false
+  onload: true
   ## true: get search.xml file when the page has loaded
   ## false: get the file when search box gets focus
 
@@ -262,8 +262,9 @@ mathjax: false
 # Social Share | 是否开启分享
 share: 
   on: true
+  spongebob: true
   baidu: false
-  addthis: true
+  addthis: false
   addthis_pubid: "ra-5992865c5fd0cfd1"
   ## Go to www.addthis.com/dashboard to get your pubid (in src of Code)
   ## and customize AddThis share buttons
@@ -311,7 +312,7 @@ donate:
 CDN:
   jquery: //cdn.bootcss.com/jquery/2.2.4/jquery.min.js
   require: //cdn.bootcss.com/require.js/2.2.0/require.min.js
-  fontawesome: //cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css
+  fontawesome: //cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css
   fancybox_js: //cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js
   fancybox_css: //cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css
   jquery_ui_js: //cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js

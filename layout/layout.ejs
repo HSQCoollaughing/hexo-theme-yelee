@@ -5,20 +5,7 @@
       <%- partial('_partial/left-col', null, {cache: !config.relative_link}) %>
     </div>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bubbly-bg@0.2.3/dist/bubbly-bg.js"></script>
-    <script>
-      var userAgent = window.navigator.userAgent;
-      bubbly({
-        animate: true,
-        blur: 1,
-        bubbleFunc: () => `hsla(${Math.random() * 360}, 100%, 50%, ${Math.random() * 0.25})`,
-        bubbles: !!userAgent.match(/AppleWebKit.*Mobile.*/) ? 20 : 50,
-        canvas: document.querySelector("#background"),
-        colorStart: "#f6d365",
-        colorStop: "#fda085",
-        compose: "lighter",
-        shadowColor: "#383838",
-      });
-    </script>
+    <script>var userAgent=window.navigator.userAgent;bubbly({animate:!0,blur:1,bubbleFunc:()=>`hsla(${360*Math.random()}, 100%, 50%, ${.25*Math.random()})`,bubbles:userAgent.match(/AppleWebKit.*Mobile.*/)?20:50,canvas:document.querySelector("#background"),colorStart:"#f6d365",colorStop:"#fda085",compose:"lighter",shadowColor:"#383838"});</script>
     <div class="hide-left-col" title="隐藏侧栏">
         <i class="fa fa-angle-double-left"></i>
     </div>

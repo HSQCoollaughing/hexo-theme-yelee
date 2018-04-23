@@ -47,6 +47,11 @@
 
 <link href="<%- theme.CDN.fontawesome %>" rel="stylesheet">
 
+<% if (theme.share.on && theme.share.spongebob) { %>
+    <link rel="stylesheet" type="text/css" href="/pages/share/iconfont.css">
+    <link rel='stylesheet' href='/pages/share/spongebob.min.css' type='text/css' media='all'/>
+<% } %>
+
 <%  var title = page.title;
 if ( is_archive() ) {
         title = 'Archives';
