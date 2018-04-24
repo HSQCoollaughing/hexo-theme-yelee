@@ -85,13 +85,13 @@ require([], function (){
 
     // Animate on Homepage
     if(!!yiliaConfig.isHome) {
-        var animationNames = ["fade-left", "zoom-in-up", "fade-up-left", "zoom-in-left", "zoom-out"],
+        var animationNames = ["fade-left", "zoom-in-up", "fade-up-left", "zoom-in-left", "zoom-out", "flip-down"],
         randomAnimationName = animationNames[Math.floor(Math.random() * animationNames.length)];
         $('.body-wrap > article').each(function(){
             if ($(this).offset().top < $(window).scrollTop() + $(window).height()) {
                 $(this).css({opacity: 1})
             } else {
-                $(this).attr("data-aos", randomAnimationName).attr("data-aos-duration", 800).attr("data-aos-delay", 150);
+                $(this).attr("data-aos", randomAnimationName).attr("data-aos-duration", 500).attr("data-aos-delay", 150);
             }
         })
     } else {
