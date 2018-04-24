@@ -271,8 +271,8 @@ share:
 
 # 百度、谷歌站长验证。填写 HTML 标签 content
 # Site Verification for Google and Baidu. HTML label content.
-baidu_site:
-google_site:
+baidu_site: "yvSXOjM1ag"
+google_site: "riwnp5QCq6dRKbhBa3d3aDZrfGLQVhMFN9d4fMGYuoU"
 
 # Fill in Google Analytics tracking ID, #e.g. UA-XXXXX-X
 google_analytics: UA-106179639-1
@@ -318,7 +318,6 @@ CDN:
   jquery_ui_js: //cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js
   jquery_ui_css: //cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css
   pace_js: //cdn.bootcss.com/pace/1.0.2/pace.min.js
-  clipboard: //cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js
   mathjax: //cdn.bootcss.com/mathjax/2.6.1/MathJax.js
   aplayer: //cdn.bootcss.com/aplayer/1.6.0/APlayer.min.js
   player: //cdn.jsdelivr.net/npm/meting@1.0.1/dist/Meting.min.js
