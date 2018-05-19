@@ -1,9 +1,25 @@
 <script src="<%- theme.CDN.aplayer %>"></script>
-<script src="<%- theme.CDN.player %>"></script>
-
-<div class="aplayer" data-id="<%= post.music %>" data-server="netease" data-type="song" data-autoplay="true"></div>
-<div style="height: 16px"></div>
-
+<div id="player"></div>
 <script>
-  $(".left-col").css("display") === "none" && $(".aplayer").remove();
+  if($(".left-col").css("display") !== "none") {
+    const ap = new APlayer({
+      element: document.getElementById('player'),
+      mutex: true,
+      theme: '#EBEEDF',
+      order: 'random',
+      lrcType: 3,
+      fixed: true,
+    });
+    var xhr = new XMLHttpRequest(), listid = 883067320;
+    xhr.open('get', 'https://api.i-meto.com/meting/api?server=netease&type=playlist&id=' + listid);
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          ap.list.add(JSON.parse(xhr.responseText));
+          ap.play();
+        }
+      }
+    }
+    xhr.send();
+  }
 </script>

@@ -31,10 +31,8 @@
           <% if (is_page()){ %>
               <%- partial('_partial/page') %>
           <% } %>
-        <% if (post.music){ %>
-            <%- partial('post/player') %>
-        <% } %>
         <%- post.content %>
+        <%- partial('post/player') %>
       <% } %>
     </div>
     <% if (index){ %>

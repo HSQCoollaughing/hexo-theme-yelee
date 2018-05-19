@@ -7,8 +7,7 @@ Yelee: "3.5"
 ## About Page: `hexo new page about`
 ## Tags Cloud Page: `hexo new page tags`
 menu:
-  # 主页: /
-  首页: http://home.wangriyu.wang
+  主页: //home.wangriyu.wang
   归档: /archives/
   相册: /pages/waterFallAlbum
   简历: /about/
@@ -117,8 +116,8 @@ valine:
   appid: iOiLPXAowPOMaotX1WyfeCWc-gzGzoHsz
   appkey: lpS7UTUdJ4DkttQMlw4ulEFP
   verify: false #验证码
-  notify: false #评论回复提醒
-  avatar: identicon #评论列表头像样式：''/mm/identicon/monsterid/wavatar/retro/hide
+  notify: true #评论回复提醒
+  avatar: retro #评论列表头像样式：''/mm/identicon/monsterid/wavatar/retro/hide
   placeholder: Just do it ! #评论框占位符
 
 wildfire:
@@ -245,9 +244,9 @@ tab_title_change:
 # Local Site Search | 本地站内搜索
 ## Insatall below plugin to take effect | 使用搜索需先安装对应插件
 ## https://github.com/PaicHyperionDev/hexo-generator-search
-search: 
+search:
   on: true
-  onload: true
+  onload: false
   ## true: get search.xml file when the page has loaded
   ## false: get the file when search box gets focus
 
@@ -319,7 +318,7 @@ CDN:
   jquery_ui_css: //cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css
   pace_js: //cdn.bootcss.com/pace/1.0.2/pace.min.js
   mathjax: //cdn.bootcss.com/mathjax/2.6.1/MathJax.js
-  aplayer: //cdn.bootcss.com/aplayer/1.6.0/APlayer.min.js
-  player: //cdn.jsdelivr.net/npm/meting@1.0.1/dist/Meting.min.js
+  aplayer: //cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js
+  aplayer_css: //cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css
   aos_css: //cdn.bootcss.com/aos/2.2.0/aos.css
   aos_js: //cdn.bootcss.com/aos/2.2.0/aos.js
