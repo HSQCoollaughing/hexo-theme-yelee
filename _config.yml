@@ -14,7 +14,10 @@ menu:
   标签云: /tags/
 
 # Link to your avatar | 填写头像地址
-avatar: /img/avatar.jpg
+avatar: //src.wangriyu.wang/images/blog/avatar.jpg
+
+# 左栏背景
+left_col_bg: //src.wangriyu.wang/images/blog/yule.jpg
 
 # Small icon of Your site | 站点小图标地址
 favicon: /favicon.ico
@@ -138,19 +141,10 @@ base_font_size: 16  #px, 16 - 24
 ## 可用值 Value: yilia
 color_scheme: 
 
-highlight_style:
-  on: true
-  inline_code: 3  # Value: 0 - 9 可选
-  code_block: 4  # Value: 0 - 4
-  # Set inline_code to style highlight text
-  # Chose a highlight theme for code block
-  # 通过 inline_code 切换内置文本高亮样式
-  # 通过 code_block 切换内置代码高亮配色主题
-
+# 自定义文章「引用部分」的样式
 blockquote_style:
   on: true
   blockquote: 3  # Value: 0 - 7 可选
-  # 自定义文章「引用部分」的样式
 
 # Headings Style | 标题风格
 ## 0-Yelee, 1-Yilia, 2-GitHub
@@ -256,7 +250,7 @@ fancybox: true
 
 # Display Math(LaTeX, MathML...) | 数学公式支持
 ## https://www.mathjax.org/
-mathjax: false
+mathjax: true
 
 # Social Share | 是否开启分享
 share: 
@@ -306,7 +300,7 @@ progressBar:
 # 将on改为false去掉打赏
 donate:
   on: true
-  multipay: /img/multipay.png
+  multipay: //src.wangriyu.wang/images/blog/multipay.png
 
 CDN:
   jquery: //cdn.bootcss.com/jquery/2.2.4/jquery.min.js
@@ -317,8 +311,8 @@ CDN:
   jquery_ui_js: //cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js
   jquery_ui_css: //cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css
   pace_js: //cdn.bootcss.com/pace/1.0.2/pace.min.js
-  mathjax: //cdn.bootcss.com/mathjax/2.6.1/MathJax.js
-  aplayer: //cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js
-  aplayer_css: //cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css
+  mathjax: //cdn.bootcss.com/mathjax/2.7.4/MathJax.js
+  aplayer: //src.wangriyu.wang/lib/js/APlayer.min.js
+  aplayer_css: //src.wangriyu.wang/lib/css/APlayer.min.css
   aos_css: //cdn.bootcss.com/aos/2.2.0/aos.css
   aos_js: //cdn.bootcss.com/aos/2.2.0/aos.js

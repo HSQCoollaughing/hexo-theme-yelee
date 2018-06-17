@@ -1,25 +1,3 @@
 <script src="<%- theme.CDN.aplayer %>"></script>
-<div id="player"></div>
-<script>
-  if($(".left-col").css("display") !== "none") {
-    const ap = new APlayer({
-      element: document.getElementById('player'),
-      mutex: true,
-      theme: '#EBEEDF',
-      order: 'random',
-      lrcType: 3,
-      fixed: true,
-    });
-    var xhr = new XMLHttpRequest(), listid = 883067320;
-    xhr.open('get', 'https://api.i-meto.com/meting/api?server=netease&type=playlist&id=' + listid);
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState === 4) {
-        if (xhr.status === 200) {
-          ap.list.add(JSON.parse(xhr.responseText));
-          ap.play();
-        }
-      }
-    }
-    xhr.send();
-  }
-</script>
+<div id="aplayer"></div>
+<script src="/js/player.js"></script>
