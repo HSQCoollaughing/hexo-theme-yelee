@@ -139,7 +139,7 @@ base_font_size: 16  #px, 16 - 24
 
 ## General Color Scheme | 主题配色方案 
 ## 可用值 Value: yilia
-color_scheme: 
+color_scheme:
 
 # 自定义文章「引用部分」的样式
 blockquote_style:
@@ -306,13 +306,14 @@ CDN:
   jquery: //cdn.bootcss.com/jquery/2.2.4/jquery.min.js
   require: //cdn.bootcss.com/require.js/2.2.0/require.min.js
   fontawesome: //cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css
-  fancybox_js: //cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js
-  fancybox_css: //cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css
+  fancybox_js: //cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.js
+  fancybox_css: //cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.css
   jquery_ui_js: //cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js
   jquery_ui_css: //cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css
   pace_js: //cdn.bootcss.com/pace/1.0.2/pace.min.js
   mathjax: //cdn.bootcss.com/mathjax/2.7.4/MathJax.js
-  aplayer: //src.wangriyu.wang/lib/js/APlayer.min.js
-  aplayer_css: //src.wangriyu.wang/lib/css/APlayer.min.css
+  aplayer: //cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js
+  aplayer_css: //cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css
   aos_css: //cdn.bootcss.com/aos/2.2.0/aos.css
   aos_js: //cdn.bootcss.com/aos/2.2.0/aos.js
+  bubbly_bg: //cdn.jsdelivr.net/npm/bubbly-bg@1.0.0/dist/bubbly-bg.js
