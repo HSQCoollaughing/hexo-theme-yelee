@@ -9,10 +9,10 @@
 <meta name="author" content="<%= config.author %>" />
 
 <% if (is_home()){ %>
-    <% if (theme.baidu_site) { %> 
+    <% if (theme.baidu_site) { %>
         <meta name="baidu-site-verification" content="<%- theme.baidu_site %>" />
     <% } %>
-    <% if (theme.google_site) { %> 
+    <% if (theme.google_site) { %>
         <meta name="google-site-verification" content="<%- theme.google_site %>" />
     <% } %>
 <% } %>
@@ -29,9 +29,6 @@
     <link rel="shortcut icon" href="<%- theme.root_url %><%- theme.favicon %>">
 <% } %>
 
-<link href="<%- theme.CDN.aos_css %>" rel="stylesheet">
-<script src="<%- theme.CDN.aos_js %>"></script>
-
 <% if (theme.fancybox){ %>
     <link href="<%- theme.CDN.fancybox_css %>" rel="stylesheet">
 <% } %>
@@ -42,13 +39,6 @@
 <% } %>
 
 <%- css('css/style') %>
-
-<link href="<%- theme.CDN.fontawesome %>" rel="stylesheet">
-
-<% if (!is_home() && theme.share.on && theme.share.spongebob) { %>
-    <link rel="stylesheet" type="text/css" href="/share/iconfont.css">
-    <link rel='stylesheet' href='/share/spongebob.min.css' type='text/css' media='all'/>
-<% } %>
 
 <%  var title = page.title;
 if (is_archive()) {
@@ -66,8 +56,8 @@ if (is_archive()) {
 <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
 
 <script src="<%- theme.CDN.jquery %>"></script>
-
-<link href="<%- theme.CDN.aplayer_css%>" rel="stylesheet">
+<link href="<%- theme.CDN.fontawesome %>" rel="stylesheet">
+<script src="<%- theme.CDN.aos_js %>"></script>
 
 <script>
 var yiliaConfig = {
@@ -102,7 +92,7 @@ var yiliaConfig = {
         (function() {
             var hm = document.createElement("script");
             hm.src = "//hm.baidu.com/hm.js?<%=theme.baidu_tongji%>";
-            var s = document.getElementsByTagName("script")[0]; 
+            var s = document.getElementsByTagName("script")[0];
             s.parentNode.insertBefore(hm, s);
         })();
     </script>

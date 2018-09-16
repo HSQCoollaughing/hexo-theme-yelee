@@ -86,8 +86,8 @@
           title: post.title,
           url: config.url+url_for(post.path)
         }) %>
-    <% } else if (theme.wildfire.on) { %>
-        <%- partial('comments/wildfire') %>
+    <% } else if (theme.gitalk.on) { %>
+        <%- partial('comments/gitalk') %>
     <% } %>
 <% } %>
 
