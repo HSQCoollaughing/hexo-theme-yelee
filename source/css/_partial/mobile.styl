@@ -79,6 +79,7 @@
     .article-entry{
         padding-left: 0;
         padding-right: 0;
+        font-size: .75rem;
     }
     .article-title{
         display: block;
@@ -176,17 +177,10 @@
 }
 
 #footer {
-    .footer-left{
-        float: initial;
-        margin-bottom: .5em;
-    }
-    .footer-right{
-        float: initial !important;
-        margin: 0;
-        margin-bottom: 1em;
-    }
-    .visit {
-        margin: 0;
+    #footer-info {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -198,9 +192,6 @@
 }
 .article-meta time:before {
     display: none;
-}
-.visit {
-    margin-top: 1em;
 }
 
 #tocButton {
@@ -287,7 +278,7 @@ if toc-nowrap
     z-index: 100;
     position: fixed;
     left: .5em;
-    top: auto; 
+    top: auto;
     bottom: 10px;
     padding: .2em .4em;
     border-radius: 6px;
@@ -316,7 +307,7 @@ if hexo-config("github_widget")
         display none
 
 .copyright
-    font-size 16px
+    font-size 1rem
 
 // Tags Cloud Page
 .tags a

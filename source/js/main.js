@@ -49,6 +49,10 @@ require([], function (){
 
     if(!!browser.versions.mobile || $(window).width() <= 768){
         loadMobile();
+        require([jsPath + 'mobile.js'], function(mobile){
+            mobile.renderDOM();
+        })
+
     } else {
         loadPC();
     }

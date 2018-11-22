@@ -269,10 +269,22 @@
         height 4px
         background-color #fff
         border-radius 4px
-        box-shadow 0 0 0 1px rgba(0,0,0,.3)
+        //box-shadow 0 0 0 1px rgba(0,0,0,.3)
         position absolute
         top .4375rem
         left 2px
+
+.article-count
+    display flex
+    flex-wrap wrap
+    span
+        cursor pointer
+        line-height 29px
+        font-size 0.75rem
+        color #aaa
+        &:before
+            content "\27A4"
+            margin-left 1em
 
 .article-tag::before,
 .article-category::before
@@ -284,20 +296,11 @@
 
 .article-tag::before
     content "\f02b"
-    margin-left 1em
 
 .article-tag
     .article-tag-list
         display flex
         flex-wrap wrap
-    span
-        cursor pointer
-        line-height 29px
-        font-size 13px
-        color #aaa
-        &:before
-            content "\27A4"
-            margin-left 1em
 
 .article-category::before
     content "\f02d"
@@ -311,8 +314,3 @@
         float left
         margin-right 5px
         margin-top (1/3)rem
-    &:after
-        float left
-        content ""
-        margin-right 20px
-        margin-top 9px

@@ -14,8 +14,12 @@
       </header>
       <% if (!index){ %>
       <div class="article-info article-info-post">
-        <%- partial('post/category') %>
-        <%- partial('post/tag') %>
+        <div class="article-count">
+          <%- partial('post/category') %>
+          <%- partial('post/tag') %>
+          <span class="post-count">总字数<%= wordcount(post.content) %></span>
+          <span class="post-count">预计阅读<%= min2read(post.content) %>分钟</span>
+        </div>
         <div class="clearfix"></div>
       </div>
       <% } %>
@@ -37,13 +41,17 @@
     </div>
     <% if (index){ %>
     <div class="article-info article-info-index">
-      <%if(post.top){%>
-        <div class="article-pop-out tagcloud">
-          <a class="">置顶</a>
-        </div>
-      <% } %>
-      <%- partial('post/category') %>
-      <%- partial('post/tag') %>
+      <div class="article-count">
+        <%if(post.top){%>
+          <div class="article-pop-out tagcloud">
+            <a class="">置顶</a>
+          </div>
+        <% } %>
+        <%- partial('post/category') %>
+        <%- partial('post/tag') %>
+        <span class="post-count">总字数<%= wordcount(post.content) %></span>
+        <span class="post-count">预计阅读<%= min2read(post.content) %>分钟</span>
+      </div>
       <% if (index && (post.description || post.excerpt)){ %>
         <p class="article-more-link">
           <a href="<%- url_for(post.path) %>#more"><%= __('index.more') %> >></a>

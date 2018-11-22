@@ -22,7 +22,8 @@ input, button
 html
   height: 100%;
   min-height: 100%;
-  font-size base-font-size
+  min-width: 300px;
+  font-size: base-font-size;
 
 body
   height: 100%;
@@ -74,7 +75,7 @@ a {
   float:right
 }
 .clearfix {
-  *zoom:1
+  zoom:1
 }
 .clearfix:after {
   content:"";
@@ -122,7 +123,7 @@ if sidebar
   color gray
   padding .05em .3em
   border-radius 3px
-  box-shadow 1px 1px 1px rgba(0,0,0, .08)
+  //box-shadow 1px 1px 1px rgba(0,0,0, .08)
   background rgba(255, 250, 165, .7)
 
 .article-entry pre code

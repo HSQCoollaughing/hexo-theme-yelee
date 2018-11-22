@@ -124,6 +124,9 @@
         .hide-left-col {
             display: none;
         }
+        .article-entry li {
+            font-size: .75rem;
+        }
         @import "_partial/mobile"
     }
 }
@@ -169,7 +172,7 @@
         &:hover {
             background: white;
             border: 5px solid #FDE3CF;
-            box-shadow: 0 0 1.5em #FDE3CF;
+            //box-shadow: 0 0 1.5em #FDE3CF;
             animation: profilepic 5s linear infinite;
             -webkit-animation: profilepic 5s linear infinite;
         }
@@ -297,7 +300,7 @@
         display: block;
         width: 29px;
         height: 42px;
-        font-size: 28px;
+        font-size: 1.75rem;
         background: rgba(215, 216, 215, .4);
         .fa {
             color: rgba(255, 255, 255, .8);
@@ -363,16 +366,14 @@
         a {
             color: gray;
             &:hover {
-                color: ;
                 text-decoration: none;
             }
         }
         &:hover {
-            background: ;
             a {
                 color: #88acdb;
             }
-        };
+        }
    }
 }
 
@@ -396,7 +397,7 @@ if hexo-config("jquery_ui")
     .ui-tooltip
         padding 6px
         max-width 30em
-        box-shadow 0 0 .8em rgba(0, 0, 0, .6)
+        //box-shadow 0 0 .8em rgba(0, 0, 0, .6)
         color white
         font-family font-sans, font-chs, sans-serif
         font-size .9em
@@ -411,7 +412,7 @@ if hexo-config("progressBar.on") && hexo-config("progressBar.type") == "minimal"
         if bar-color == "blue"
             .pace .pace-progress
                 background #77b6ff
-                box-shadow 0 0 10px rgba(@background, .7)
+                //box-shadow 0 0 10px rgba(@background, .7)
 
 .article-entry ul > li,
 .share,
