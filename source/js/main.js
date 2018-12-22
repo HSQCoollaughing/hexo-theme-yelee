@@ -49,10 +49,6 @@ require([], function (){
 
     if(!!browser.versions.mobile || $(window).width() <= 768){
         loadMobile();
-        require([jsPath + 'mobile.js'], function(mobile){
-            mobile.renderDOM();
-        })
-
     } else {
         loadPC();
     }
@@ -67,31 +63,20 @@ require([], function (){
     }
 
     // fancyBox
-    if(!!yiliaConfig.fancybox){
-        require([yiliaConfig.fancybox_js], function(pc){
+    if (!!yiliaConfig.fancybox) {
+        require([yiliaConfig.fancybox_js], function () {
             var isFancy = $(".isFancy");
-            if(isFancy.length != 0){
-                var imgArr = $(".article-inner img");
-                for(var i=0,len=imgArr.length;i<len;i++){
-                    var src = imgArr.eq(i).attr("src");
-                    var title = imgArr.eq(i).attr("alt");
-                    if(typeof(title) == "undefined"){
-                        var title = imgArr.eq(i).attr("title");
-                    }
-                    var width = imgArr.eq(i).attr("width");
-                    var height = imgArr.eq(i).attr("height");
-                    imgArr.eq(i).replaceWith("<a class='fancy-ctn' href='"+src+"' title='"+title+"' data-fancybox='images' data-caption='"+src.substring(src.lastIndexOf("/")+1)+"'><img src='"+src+"' width="+width+" height="+height+" title='"+title+"' alt='"+title+"'></a>");
-                }
+            if (isFancy.length != 0) {
                 $(".article-inner .fancy-ctn").fancybox({
-                  loop: true,
-                  touch: false,
-                  toolbar: true,
-                  wheel: false,
-                  buttons: [
-                    "fullScreen",
-                    "thumbs",
-                    "close"
-                  ],
+                    loop: true,
+                    touch: false,
+                    toolbar: true,
+                    wheel: false,
+                    buttons: [
+                        "fullScreen",
+                        "thumbs",
+                        "close"
+                    ],
                 });
             }
         })

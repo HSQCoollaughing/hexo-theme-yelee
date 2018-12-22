@@ -27,10 +27,13 @@ define([], function(){
     }
     //第三步 -- 根据数据渲染DOM
     var renderDOM = function(){
-        //生成节点
-        var $viewer = document.createElement("div");
-        $viewer.id = "viewer";
-        $viewer.className = "hide";
+        var $viewer = document.getElementById("viewer");
+        if (!$viewer) {
+            //生成节点
+            $viewer = document.createElement("div");
+            $viewer.id = "viewer";
+            $viewer.className = "hide";
+        }
         $tag = document.getElementById("js-tagcloud");
         $aboutme = document.getElementById("js-aboutme");
         $friends = document.getElementById("js-friends");
@@ -145,11 +148,10 @@ define([], function(){
             ctn = document.getElementsByClassName("slider-trigger")[0];
             //构造四步
             reset();
-            // renderDOM();
+            renderDOM();
             combine();
             bindDOM();
             resetTags();
         },
-        renderDOM: renderDOM()
     }
 })

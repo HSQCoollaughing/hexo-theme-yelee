@@ -234,31 +234,30 @@
 .article-meta
     position absolute
     right 0
-    top 23px
-    width 9rem
+    top 18px
+    width 10rem
     padding-right 1.2rem
-    font-size 0.875rem
+    font-size 0.75rem
     text-align right
     z-index 1
     time
         color #aaa
         float right
-        &:before
+    .published
+      &:before
             margin-top 0px
-            margin-right 4px
-            content "\f073"
+            margin-right 5px
+            content "\f133"
             font 1em FontAwesome
             color #999
-    a:nth-child(2)
-        &:hover
-            color #258fb8
-            font-size .8rem
-        i
-            vertical-align top
-        clear right
-        float right
-        padding-top .45rem
-        color #999
+    .updated
+      margin-top 3px
+      &:before
+            margin-top 0px
+            margin-right 4px
+            content "\f274"
+            font 1em FontAwesome
+            color #999
 
 .article-more-link {
     float: right;

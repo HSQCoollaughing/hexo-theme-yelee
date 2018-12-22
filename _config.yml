@@ -43,20 +43,20 @@ since: 2017
 ## https://github.com/hexojs/hexo-generator-feed
 
 subnav:
-  Email: "mailto:wangriyu1997@gmail.com"
+  掘金: "https://juejin.im/user/58c3744bda2f605609683d66"
+  #Email: "mailto:wangriyu1997@gmail.com"
   #新浪微博: "sina weibo"
   GitHub: "https://github.com/wangriyu"
   #V2EX: "#"
   RSS: "/atom.xml"
   知乎: "https://www.zhihu.com/people/clownduo/activities"
   #豆瓣: "douban"
-  #简书: "jianshu"
+  网易云音乐: "https://music.163.com/#/user/home?id=102244407"
+  jianshu: "https://www.jianshu.com/u/7a8c5ba0b316"
   #SegmentFault: ""
   #博客园: "cnblogs"
   #CSDN: ""
   #Coding: ""
-  网易云音乐: "https://music.163.com/#/user/home?id=102244407"
-  掘金: "https://juejin.im/user/58c3744bda2f605609683d66"
   #虾米音乐: "xiami"
   #bilibili: ""
   #AcFun: ""
@@ -117,7 +117,7 @@ youyan:
 valine:
   on: false
   appid: XXXXXXXXX
-  appkey: XXXXXXXX
+  appkey: XXXXXXXXX
   verify: false #验证码
   notify: true #评论回复提醒
   avatar: retro #评论列表头像样式：''/mm/identicon/monsterid/wavatar/retro/hide
@@ -128,8 +128,8 @@ wildfire:
 
 gitalk:
   on: true
-  clientID: 'XXXXXXXXX'
-  clientSecret: 'XXXXXXXX'
+  clientID: XXXXXXXXX
+  clientSecret: XXXXXXXXX
   repo: 'wangriyu.github.io'
   owner: 'wangriyu'
   admin: ['wangriyu']
@@ -324,3 +324,4 @@ CDN:
   valine: //unpkg.com/valine@1.3.1/dist/Valine.min.js
   gitalk_js: //unpkg.com/gitalk/dist/gitalk.min.js
   gitalk_css: //unpkg.com/gitalk/dist/gitalk.css
+  
