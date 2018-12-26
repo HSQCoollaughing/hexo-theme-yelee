@@ -42,6 +42,7 @@
         opacity: 0.98;
         transition: width .2s ease-in;
         height:100%;
+        overflow: hidden;
         overflow-y: auto;
         background-image: url(left_col_bg);
         background-size: cover;
@@ -62,6 +63,12 @@
             width: 76%;
             text-align: center;
             margin: 66px auto 0;
+            .donateIcon-position {
+                position: absolute;
+                top: 95%;
+                left: 50%;
+                margin-left: -28px;
+            }
             #donate {
                 display: none;
                 position: absolute;
@@ -120,7 +127,7 @@
         transition: left .2s ease-in;
     }
 
-    @media screen and (max-width:768px) {
+    @media only screen and (max-width:768px) {
         .hide-left-col {
             display: none;
         }
@@ -129,12 +136,97 @@
         }
         @import "_partial/mobile"
     }
+    @media only screen and (min-width:769px) and (max-width:1280px) {
+        .left-col {
+            width: left-col-width - 100px;
+        }
+        .mid-col {
+            left: left-col-width - 100px;
+        }
+        .hide-left-col {
+            left: left-col-width - 100px;
+        }
+        #post-nav-button {
+            left: left-col-width - 100px;
+        }
+        #tocButton {
+            left: 150px;
+            top: 300px;
+        }
+        .toc-article {
+            width: 145px
+        }
+        #header {
+            .profilepic {
+                width: 88px;
+                height: 88px;
+                border: 3px solid #e5e5e5;
+            }
+            .header-author {
+                font-size: 20px;
+            }
+            .header-subtitle {
+                font-size: 10px;
+            }
+            #search-form input {
+                width: 58%;
+                height: 14px;
+            }
+            .header-menu {
+                line-height: 20px;
+            }
+            .switch-btn .tips-box .tips-inner li {
+                font-size: 10px;
+            }
+            #switch-area {
+                font-size: 10px;
+                .switch-part1 {
+                    li a {
+                        font-size: 10px;
+                    }
+                }
+            }
+            .header-nav .social a {
+                width: 24px;
+                height: 24px;
+                line-height: 24px;
+                font-size: 16px;
+            }
+            .donateIcon-position {
+                margin-left: -18px;
+            }
+            .header-nav .social .donateIcon {
+                width: 36px;
+                height: 36px;
+                line-height: 36px;
+            }
+            #donate {
+                left: -72px;
+                bottom: 40px;
+                img {
+                    width: 180px;
+                    height: 216px;
+                }
+                .triangle {
+                    margin: -5px 0 0 54px;
+                    border-right: 36px solid transparent;
+                    border-left: 36px solid transparent;
+                    border-top: 24px solid #5b91ee;
+                }
+            }
+        }
+    }
+}
+#comments {
+    * {
+        font-size: 1rem !important;
+    }
 }
 .header-author{
     text-align: center;
     margin: 13px 0;
     font-family: font-serif, serif;
-    font-size: base-font-size + 14;
+    font-size: 30px;
     transition: 0.3s;
 }
 #header{
@@ -150,8 +242,8 @@
         display: block;
         border: 5px solid #e5e5e5;
         border-radius: 50%;
-        width: 128 + base-font-size - 16;
-        height: @width;
+        width: 128px;
+        height: 128px;
         margin: 0 auto;
         position: relative;
         overflow: hidden;
@@ -188,7 +280,7 @@
     .header-subtitle{
         text-align: center;
         color:#999;
-        font-size: (14/16)rem;
+        font-size: 14px;
         line-height: 1.75;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -197,9 +289,8 @@
         -webkit-box-orient: vertical;
     }
     .header-menu{
-        menu-line-height = (28/16)rem
         font-weight: 550;
-        line-height: menu-line-height;
+        line-height: 28px;
         font-family: inherit;
         cursor: pointer;
         text-transform: uppercase;
@@ -215,7 +306,7 @@
         li{
             cursor: default;
             a{
-                font-size: (14/16)rem;
+                font-size: 14px;
                 min-width: left-col-width;
             }
         }
@@ -224,7 +315,7 @@
         position: relative;
         width: 100%;
         min-height: 320px;
-        font-size: (14/16)rem;
+        font-size: 14px;
         .switch-wrap{
             position: relative;
         }
@@ -248,8 +339,8 @@
         display: none;
         left: 0;
         overflow-y: auto;
-        max-height: 260px;
-        font-size (12/16)rem
+        max-height: 300px;
+        font-size: 12px;
     }
     .switch-part3{
         display: none;

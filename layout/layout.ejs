@@ -13,10 +13,10 @@
     <%- partial('_partial/footer') %>
   </div>
   <script type="application/javascript">
-    var hide = false, leftWidth = <%- theme.left_col_width %>;
+    var hide = false, leftWidth;
     $('.hide-left-col').click(function () {
       if (hide) {
-        $('.left-col').width(leftWidth)
+        $('.left-col').css('width', leftWidth)
         $('.left-col .intrude-less').fadeIn(200)
         $('#tocButton').fadeIn(200);
         ($('#switch-btn').css('display') === 'block' && $('#switch-area').css('display') === 'block') || $('#toc').fadeIn(200)
@@ -26,7 +26,8 @@
         $('#post-nav-button > a:nth-child(2)').css('display', 'block')
         hide = false
       } else {
-        $('.left-col').width(0)
+        leftWidth = $('.left-col')[0].style.width
+        $('.left-col').css('width', 0)
         $('.left-col .intrude-less').fadeOut(200)
         $('#toc').fadeOut(100)
         $('#tocButton').fadeOut(100)

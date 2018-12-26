@@ -143,7 +143,7 @@ gitalk:
 background_image: 4
 
 # Base Font Size | 字号调节
-base_font_size: 16  #px, 16 - 24
+base_font_size: 1  # vw, 1.0 - 1.6
 
 ## General Color Scheme | 主题配色方案
 ## 可用值 Value: yilia
@@ -324,4 +324,3 @@ CDN:
   valine: //unpkg.com/valine@1.3.1/dist/Valine.min.js
   gitalk_js: //unpkg.com/gitalk/dist/gitalk.min.js
   gitalk_css: //unpkg.com/gitalk/dist/gitalk.css
-  
